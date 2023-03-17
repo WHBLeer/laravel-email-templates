@@ -20,7 +20,7 @@ class EmailTemplatesServiceProvider extends ServiceProvider
             ], 'email-templates-config');
 
             $this->publishes([
-                __DIR__.'/resources/views' => $this->app->resourcePath('views/vendor'),
+                __DIR__.'/resources/views' => $this->app->resourcePath('views'),
             ], 'email-templates-views');
 
             $this->publishes([
