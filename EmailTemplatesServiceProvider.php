@@ -1,6 +1,6 @@
 <?php
 
-namespace Pleb;
+namespace Sanlilin;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -16,24 +16,24 @@ class EmailTemplatesServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
 
             $this->publishes([
-                __DIR__.'/config/pleb.php' => $this->app->configPath('pleb.php'),
-            ], 'pleb-email-templates-config');
+                __DIR__.'/config/email-template.php' => $this->app->configPath('email-template.php'),
+            ], 'email-templates-config');
 
             $this->publishes([
                 __DIR__.'/resources/views' => $this->app->resourcePath('views/vendor'),
-            ], 'pleb-email-templates-views');
+            ], 'email-templates-views');
 
             $this->publishes([
                 __DIR__.'/resources/lang/en' => $this->app->resourcePath('lang/en'),
-            ], 'pleb-email-templates-lang');
+            ], 'email-templates-lang');
 
             $this->publishes([
                 __DIR__.'/public/assets/img' => $this->app->basePath('public/assets/img'),
-            ], 'pleb-email-templates-img');
+            ], 'email-templates-img');
 
             $this->publishes([
                 __DIR__.'/app/Mail' => $this->app->basePath('app/Mail'),
-            ], 'pleb-email-templates-app');
+            ], 'email-templates-app');
         }
     }
 

@@ -2,7 +2,7 @@
 
 
 /**
- * Used to preview the Pleb email templates
+ * Used to preview the email templates
  * @todo remove these routes before going live
  */
 Route::get('email_template/welcome_member', function () {
