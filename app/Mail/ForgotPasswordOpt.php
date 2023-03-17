@@ -33,7 +33,7 @@ class ForgotPasswordOpt extends Mailable
      */
     public function build()
     {
-        return $this->view('email.forgot_password')->with([
+        return $this->view('email.forgot_password_opt')->with([
             'options' => $this->options
         ]);
     }

@@ -29,6 +29,15 @@ Route::get('email_template/forgot_password', function () {
     return new App\Mail\ForgotPassword($member, $options);
 });
 
+Route::get('email_template/forgot_password_opt', function () {
+	
+	$member = App\User::find(1);
+	$options = array(
+		'opt' => rand(100000,999999),
+	);
+	return new App\Mail\ForgotPasswordOpt($member, $options);
+});
+
 Route::get('email_template/thanks_payment', function () {
 
     $member = App\User::find(1);
